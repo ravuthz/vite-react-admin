@@ -1,13 +1,17 @@
+/// <reference types="vitest" />
+
 import react from '@vitejs/plugin-react';
 import fs from 'fs';
 import lessToJS from 'less-vars-to-js';
 import path from 'path';
-import { defineConfig } from 'vite';
+import { defineConfig, UserConfigExport } from 'vite';
 import vitePluginImp from 'vite-plugin-imp';
 
 const themeVariables = lessToJS(
   fs.readFileSync(path.resolve(__dirname, './src/assets/less/variables.less'), 'utf8'),
 );
+
+type AllConfig = UserConfigExport & { test: object };
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,4 +34,12 @@ export default defineConfig({
       },
     },
   },
-});
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/setupTests.js',
+    coverage: {
+      reporter: ['text', 'json', 'html'],
+    },
+  },
+} as AllConfig);

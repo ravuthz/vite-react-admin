@@ -9,3 +9,11 @@ npm pkg set scripts.prepare="husky install"
 npx husky-init && yarn install
 
 ```
+
+## Add testing
+
+```bash
+
+yarn add -D @testing-library/jest-dom @testing-library/react @testing-library/react-hooks @testing-library/user-event jsdom vitest @types/jsdom @types/testing-library__jest-dom @vitest/ui
+
+```

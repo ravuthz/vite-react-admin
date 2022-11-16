@@ -1,6 +1,6 @@
 import { PageHeader, Typography } from 'antd';
 
-import AdminLayout from '../layouts/AdminLayout/AdminLayout';
+import AdminLayout from '../../layouts/AdminLayout/AdminLayout';
 
 const { Paragraph, Title, Text } = Typography;
 

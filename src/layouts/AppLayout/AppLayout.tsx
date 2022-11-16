@@ -1,7 +1,11 @@
 import './AppLayout.less';
 
-const AppLayout = ({ children }: BaseLayout) => {
-  return <div className="AppLayout">{children}</div>;
+const AppLayout = ({ style, children }: BaseLayout) => {
+  return (
+    <div style={style} className="AppLayout">
+      {children}
+    </div>
+  );
 };
 
 export default AppLayout;
