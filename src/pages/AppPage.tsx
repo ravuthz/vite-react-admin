@@ -1,9 +1,9 @@
-import AppLayout from "../layouts/AppLayout/AppLayout";
+import AppLayout from '../layouts/AppLayout/AppLayout';
 
 const AppPage = () => {
   return (
     <AppLayout>
-      <h1 style={{ textAlign: "center" }}>AppPage</h1>
+      <h1 style={{ textAlign: 'center' }}>AppPage</h1>
       <p>Welcome to AppPage</p>
     </AppLayout>
   );

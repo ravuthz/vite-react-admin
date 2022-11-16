@@ -1,37 +1,34 @@
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
-import { Button, Layout, Menu, Space } from "antd";
-import { useState } from "react";
-import Hamburger from "../../components/Hamburger/Hamburger";
-import Logo from "../../components/Logo/Logo";
+import './AdminLayout.less';
 
-import "./AdminLayout.less";
+import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
+import { Button, Layout, Menu, Space } from 'antd';
+import { useState } from 'react';
+
+import Hamburger from '../../components/Hamburger/Hamburger';
+import Logo from '../../components/Logo/Logo';
 
 const { Header, Sider, Content } = Layout;
 
 const menus: any = [
   {
-    key: "nav 1",
-    label: "Menu 1",
+    key: 'nav 1',
+    label: 'Menu 1',
     icon: <UserOutlined />,
   },
   {
-    key: "nav 2",
-    label: "Menu 2",
+    key: 'nav 2',
+    label: 'Menu 2',
     default: true,
     icon: <VideoCameraOutlined />,
   },
   {
-    key: "nav 3",
-    label: "Menu 3",
+    key: 'nav 3',
+    label: 'Menu 3',
     icon: <UploadOutlined />,
   },
 ];
 
-export type AdminLayout = BaseLayout & {};
+export type AdminLayout = BaseLayout;
 
 const AdminLayout = ({ children, style }: AdminLayout) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -53,10 +50,10 @@ const AdminLayout = ({ children, style }: AdminLayout) => {
 
           <Space
             style={{
-              textAlign: "left",
-              float: "left",
-              marginLeft: "20px",
-              border: "1px solid red",
+              textAlign: 'left',
+              float: 'left',
+              marginLeft: '20px',
+              border: '1px solid red',
             }}
           >
             <Button>Action L1</Button>
@@ -66,9 +63,9 @@ const AdminLayout = ({ children, style }: AdminLayout) => {
 
           <Space
             style={{
-              textAlign: "justify",
-              margin: "0 auto",
-              border: "1px solid green",
+              textAlign: 'justify',
+              margin: '0 auto',
+              border: '1px solid green',
             }}
           >
             <Button>Action C1</Button>
@@ -78,10 +75,10 @@ const AdminLayout = ({ children, style }: AdminLayout) => {
 
           <Space
             style={{
-              textAlign: "right",
-              float: "right",
-              marginRight: "20px",
-              border: "1px solid blue",
+              textAlign: 'right',
+              float: 'right',
+              marginRight: '20px',
+              border: '1px solid blue',
             }}
           >
             <Button>Action R1</Button>

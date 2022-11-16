@@ -1,8 +1,7 @@
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
-import React from "react";
-import { Dispatch, SetStateAction } from "react";
+import './Hamburger.less';
 
-import "./Hamburger.less";
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+import { createElement, Dispatch, SetStateAction } from 'react';
 
 export type HamburgerType = {
   collapsed: boolean;
@@ -10,18 +9,15 @@ export type HamburgerType = {
 };
 
 console.log(
-    `Hide Hamburger wait util 'Warning: findDOMNode is deprecated in StrictMode' fixed`
-  );
+  `Hide Hamburger wait util 'Warning: findDOMNode is deprecated in StrictMode' fixed`,
+);
 
 const Hamburger = ({ collapsed, setCollapsed }: HamburgerType) => {
   return <></>;
-  return React.createElement(
-    collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-    {
-      className: "trigger",
-      onClick: () => setCollapsed(!collapsed),
-    }
-  );
+  return createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+    className: 'trigger',
+    onClick: () => setCollapsed(!collapsed),
+  });
 };
 
 export default Hamburger;
