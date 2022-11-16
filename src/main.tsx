@@ -1,11 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
+import React, { lazy } from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import './index.css'
+const AdminPage = lazy(() => import('./pages/AdminPage'));
+const AppPage = lazy(() => import('./pages/AppPage'));
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+import "./assets/less/global.less";
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AppPage />} />
+        <Route path="admin" element={<AdminPage />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
-)
+);
